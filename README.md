@@ -34,6 +34,3 @@ To get a local copy up and running, follow these steps.
 
    ```bash
    git clone https://github.com/yourusername/Hyena-Website.git
-
-   Website Link 
-https://muadhmdh.github.io/Hyena_v3/

@@ -62,64 +62,25 @@
             border-bottom: 2px solid #0e0707; /* Subtle underline effect */
         }
 
-        /* Main Content */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Slight overlay on content for readability */
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 1px 50px; /* Increase row and column gap */
+            padding: 10px;
+            max-width: 1200px;
+            margin: 10px 10px;
         }
 
-        .main-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+        .gallery img {
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
-        .main-content p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            line-height: 1.6;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow */
-        }
-
-        /* Responsive Styles for Mobile */
-        @media (max-width: 768px) {
-            nav {
-                justify-content: space-around; /* Space around items */
-            }
-
-            nav a {
-                padding: 8px 10px;
-                font-size: 0.9rem;
-            }
-
-            .main-content {
-                padding: 10px;
-            }
-
-            .main-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .main-content p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-content h1 {
-                font-size: 2rem;
-            }
-
-            .main-content p {
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -127,16 +88,24 @@
     <!-- Navigation Bar -->
     <nav>
         <a href="index.html">Profile</a>
-        <a href="image.html">Image</a>
+        <a href="home.html">Home</a>
         <a href="#video">Video</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </nav>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h1>Welcome to Hyena.v3</h1>
-        <p>Discover the journey of Hyena, the R15 V3 that combines power, style, and speed. With its 155cc engine and striking gray and gold look, Hyena.v3 is more than a ride – it's an experience.</p>
+    <div class="gallery">
+        <!-- 4x4 Grid of Images -->
+        <img src="background.jpg.jpg" alt="Gallery Image 1">
+        <img src="home.jpg" alt="Gallery Image 2">
+        <img src="image13.jpg" alt="Gallery Image 3">
+        <img src="image14.jpg" alt="Gallery Image 4">
+        <img src="image15.jpg" alt="Gallery Image 5">
+        <img src="image16.jpg" alt="Gallery Image 6">
+        <img src="image17.jpg" alt="Gallery Image 7">
+        <img src="image8.jpg" alt="Gallery Image 8">
+        <!-- Add more images if needed -->
     </div>
 </body>
 </html>
