@@ -121,6 +121,48 @@
                 line-height: 1.4;
             }
         }
+
+        /* Footer */
+        .footer {
+            background-color: #878282;
+            height: 1in; /* Fixed height */
+            text-align: center;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-icons a {
+            display: inline-block;
+        }
+
+        .footer-icons img {
+            width: 120px; /* Icon width adjusted */
+            height: 30px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .footer-icons img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: #f0f0f0;
+            margin: 5px 0 0 0;
+        }
     </style>
 </head>
 <body>
@@ -128,7 +170,7 @@
     <nav>
         <a href="index.html">Profile</a>
         <a href="image.html">Image</a>
-        <a href="#video">Video</a>
+        <a href="video.html">Video</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </nav>
@@ -137,6 +179,19 @@
     <div class="main-content">
         <h1>Welcome to Hyena.v3</h1>
         <p>Discover the journey of Hyena, the R15 V3 that combines power, style, and speed. With its 155cc engine and striking gray and gold look, Hyena.v3 is more than a ride – it's an experience.</p>
+    </div>
+
+  <!-- Footer with Social Media Links and Copyright Text -->
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/hyena.v3_/" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@_hyena.v3" target="_blank">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
+        </div>
+        <p>Copyright © 2024 Muadh Hyena</p>
     </div>
 </body>
 </html>
