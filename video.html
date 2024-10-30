@@ -14,38 +14,25 @@
         }
 
         body {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             color: #fff;
-            overflow: hidden;
-        }
-
-        /* Background Image */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(home.jpg); /* Add your background image here */
-            background-size: cover;
-            background-position: center;
-            opacity: 0.8;
-            z-index: -1;
+            height: 100vh;
             overflow: hidden; /* Prevent scrolling */
+            background: url(home.jpg) center center/cover no-repeat; /* Add background image */
         }
 
         /* Navigation Bar */
         nav {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            width: 100%;
             padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
+            z-index: 100;
         }
 
         nav a {
@@ -66,22 +53,21 @@
         /* Video Gallery Grid */
         .video-gallery {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
             padding: 20px;
             max-width: 1200px;
-            margin: 20px auto;
         }
 
         .video-container {
-            position: relative;
             overflow: hidden;
             border-radius: 10px;
         }
 
         .video-container video {
             width: 100%;
-            height: 70%;
+            height: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -92,8 +78,9 @@
 
         /* Pagination */
         .pagination {
-            text-align: center;
-            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
         .pagination a {
@@ -109,6 +96,18 @@
         .pagination a:hover {
             background-color: rgba(128, 128, 128, 0.8);
         }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .video-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+                grid-template-rows: repeat(3, 1fr); /* 3 rows on mobile */
+            }
+            nav a {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -123,7 +122,7 @@
 
     <!-- Video Gallery Grid -->
     <div class="video-gallery">
-        <!-- 4x4 Grid of Videos -->
+        <!-- 3x2 Grid of Videos on Desktop, 2x3 on Mobile -->
         <div class="video-container">
             <video controls>
                 <source src="IMG_1247.mp4" type="video/mp4">
@@ -142,8 +141,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <!-- Repeat for additional videos -->
-        <!-- Add up to 16 videos in this structure -->
+        <!-- Add more videos for a 3x2 grid on desktop, 2x3 on mobile -->
     </div>
 
     <!-- Pagination -->
